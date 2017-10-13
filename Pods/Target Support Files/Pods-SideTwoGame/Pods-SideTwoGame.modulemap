@@ -1,0 +1,6 @@
+framework module Pods_SideTwoGame {
+  umbrella header "Pods-SideTwoGame-umbrella.h"
+
+  export *
+  module * { export * }
+}
