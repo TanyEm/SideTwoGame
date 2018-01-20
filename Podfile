@@ -7,5 +7,10 @@ target 'SideTwoGame' do
 
   # Pods for SideTwoGame
 pod 'SWRevealViewController', '~> 2.3'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
+pod 'Alamofire', '~> 4.5'
+pod 'SwiftyJSON'
 
 end

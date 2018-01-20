@@ -12,7 +12,7 @@
 		73C6F65E1F5DFB580010F8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C6F65C1F5DFB580010F8D5 /* Main.storyboard */; };
 		73C6F6601F5DFB580010F8D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C6F65F1F5DFB580010F8D5 /* Assets.xcassets */; };
 		73C6F6631F5DFB580010F8D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C6F6611F5DFB580010F8D5 /* LaunchScreen.storyboard */; };
-		73C6F66B1F5DFBED0010F8D5 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6F66A1F5DFBED0010F8D5 /* StartViewController.swift */; };
+		73C6F66B1F5DFBED0010F8D5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6F66A1F5DFBED0010F8D5 /* LoginViewController.swift */; };
 		73C6F6741F5E18020010F8D5 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6F6731F5E18020010F8D5 /* MenuTableViewController.swift */; };
 		73C6F6761F5E1CEE0010F8D5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6F6751F5E1CED0010F8D5 /* HomeViewController.swift */; };
 		73C6F6781F5E1D100010F8D5 /* GameOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6F6771F5E1D100010F8D5 /* GameOneViewController.swift */; };
@@ -28,7 +28,7 @@
 		73C6F65F1F5DFB580010F8D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73C6F6621F5DFB580010F8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73C6F6641F5DFB580010F8D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73C6F66A1F5DFBED0010F8D5 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		73C6F66A1F5DFBED0010F8D5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		73C6F66C1F5E01210010F8D5 /* SideTwoGame-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SideTwoGame-Bridging-Header.h"; sourceTree = "<group>"; };
 		73C6F6731F5E18020010F8D5 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		73C6F6751F5E1CED0010F8D5 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 				73C6F65F1F5DFB580010F8D5 /* Assets.xcassets */,
 				73C6F6611F5DFB580010F8D5 /* LaunchScreen.storyboard */,
 				73C6F6641F5DFB580010F8D5 /* Info.plist */,
-				73C6F66A1F5DFBED0010F8D5 /* StartViewController.swift */,
+				73C6F66A1F5DFBED0010F8D5 /* LoginViewController.swift */,
 				73C6F6731F5E18020010F8D5 /* MenuTableViewController.swift */,
 				73C6F6751F5E1CED0010F8D5 /* HomeViewController.swift */,
 				73C6F6771F5E1D100010F8D5 /* GameOneViewController.swift */,
@@ -190,11 +190,29 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SideTwoGame/Pods-SideTwoGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -246,7 +264,7 @@
 				73C6F6591F5DFB580010F8D5 /* AppDelegate.swift in Sources */,
 				73C6F6781F5E1D100010F8D5 /* GameOneViewController.swift in Sources */,
 				73C6F67A1F5E1D1F0010F8D5 /* GameTwoViewController.swift in Sources */,
-				73C6F66B1F5DFBED0010F8D5 /* StartViewController.swift in Sources */,
+				73C6F66B1F5DFBED0010F8D5 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,7 +392,7 @@
 				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = SideTwoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MobileMedia.SideTwoGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.SideTwoGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SideTwoGame/SideTwoGame-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -391,7 +409,7 @@
 				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = SideTwoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.MobileMedia.SideTwoGame;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tanyem.SideTwoGame;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "SideTwoGame/SideTwoGame-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
