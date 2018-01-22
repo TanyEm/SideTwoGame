@@ -49,13 +49,31 @@
                                     <action selector="FBLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuu-Kg-Vrm"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dch-XI-KCj">
+                                <rect key="frame" x="102.5" y="607" width="170" height="50"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="8Lm-2N-YZd"/>
+                                    <constraint firstAttribute="height" constant="50" id="SJo-B6-jaq"/>
+                                    <constraint firstAttribute="width" constant="170" id="xmX-T6-cyE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Login via other account">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="FBLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MrP-Vu-hVS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ZyZ-4L-4md" secondAttribute="trailing" constant="20" id="0Zw-EP-WEj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tSg-nr-E12" secondAttribute="bottom" constant="68" id="C4M-wx-ykr"/>
                             <constraint firstItem="ZyZ-4L-4md" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Dkw-AV-fba"/>
+                            <constraint firstItem="dch-XI-KCj" firstAttribute="top" secondItem="tSg-nr-E12" secondAttribute="bottom" constant="8" id="QRE-jx-doA"/>
                             <constraint firstItem="ZyZ-4L-4md" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="TFW-zi-2D8"/>
+                            <constraint firstItem="dch-XI-KCj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jTj-lq-zC4"/>
                             <constraint firstItem="tSg-nr-E12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nSX-RV-TeZ"/>
                             <constraint firstItem="FLe-EO-vea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nVi-1k-t3D"/>
                             <constraint firstAttribute="trailing" secondItem="tSg-nr-E12" secondAttribute="trailing" constant="20" id="sdJ-zg-cq0"/>
@@ -63,6 +81,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loginFB" destination="tSg-nr-E12" id="eZi-8q-nph"/>
+                        <outlet property="logoutFB" destination="dch-XI-KCj" id="p02-eK-uMe"/>
                         <segue destination="0wz-vP-QJp" kind="showDetail" identifier="ClientView" id="CgZ-uG-67R"/>
                     </connections>
                 </viewController>
@@ -158,7 +178,7 @@
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-bC-0t0">
-                                <rect key="frame" x="169" y="315.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -430,7 +450,7 @@
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DBH-EG-VdK">
-                                <rect key="frame" x="169" y="315.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>

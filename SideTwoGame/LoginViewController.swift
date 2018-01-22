@@ -11,6 +11,8 @@ import FBSDKLoginKit
 
 class LoginViewController: UIViewController {
 
+    @IBOutlet weak var loginFB: UIButton!
+    @IBOutlet weak var logoutFB: UIButton!
     var loginSuccess = false
 
     @IBAction func FBLoginButton(_ sender: UIButton) {
@@ -21,8 +23,10 @@ class LoginViewController: UIViewController {
             FBManager.shared.logIn(withReadPermissions: ["public_profile", "email"], from: self,
                                    handler: { (result, error) in
                 if error == nil{
-                    self.loginSuccess = true
-                    self.viewDidAppear(true)
+                    FBManager.getGserData(competion: {
+                        self.loginSuccess = true
+                        self.viewDidAppear(true)
+                    })
                 }
             })
         }
@@ -33,6 +37,7 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
     }
 
     override func viewDidAppear(_ animated: Bool) {
