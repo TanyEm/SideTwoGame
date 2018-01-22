@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		577B937A6698D3D569E94B18 /* Pods_SideTwoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E490C5D33918659CA2E41B /* Pods_SideTwoGame.framework */; };
+		73B10F9E2013AE2000C7ABA3 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B10F9D2013AE1F00C7ABA3 /* FBManager.swift */; };
 		73C6F6591F5DFB580010F8D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73C6F6581F5DFB580010F8D5 /* AppDelegate.swift */; };
 		73C6F65E1F5DFB580010F8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C6F65C1F5DFB580010F8D5 /* Main.storyboard */; };
 		73C6F6601F5DFB580010F8D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C6F65F1F5DFB580010F8D5 /* Assets.xcassets */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73B10F9D2013AE1F00C7ABA3 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
+		73B10F9F2013AF7800C7ABA3 /* SideTwoGame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SideTwoGame.entitlements; sourceTree = "<group>"; };
 		73C6F6551F5DFB580010F8D5 /* SideTwoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SideTwoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C6F6581F5DFB580010F8D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		73C6F65D1F5DFB580010F8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		73C6F6571F5DFB580010F8D5 /* SideTwoGame */ = {
 			isa = PBXGroup;
 			children = (
+				73B10F9F2013AF7800C7ABA3 /* SideTwoGame.entitlements */,
 				73C6F6581F5DFB580010F8D5 /* AppDelegate.swift */,
 				73C6F65C1F5DFB580010F8D5 /* Main.storyboard */,
 				73C6F65F1F5DFB580010F8D5 /* Assets.xcassets */,
@@ -100,6 +104,7 @@
 				73C6F6731F5E18020010F8D5 /* MenuTableViewController.swift */,
 				73C6F6751F5E1CED0010F8D5 /* HomeViewController.swift */,
 				73C6F6771F5E1D100010F8D5 /* GameOneViewController.swift */,
+				73B10F9D2013AE1F00C7ABA3 /* FBManager.swift */,
 				73C6F6791F5E1D1F0010F8D5 /* GameTwoViewController.swift */,
 				73C6F66C1F5E01210010F8D5 /* SideTwoGame-Bridging-Header.h */,
 				73C6F67B1F5E21E70010F8D5 /* game1 */,
@@ -146,6 +151,11 @@
 						DevelopmentTeam = 7EH4Z4842M;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -265,6 +275,7 @@
 				73C6F6781F5E1D100010F8D5 /* GameOneViewController.swift in Sources */,
 				73C6F67A1F5E1D1F0010F8D5 /* GameTwoViewController.swift in Sources */,
 				73C6F66B1F5DFBED0010F8D5 /* LoginViewController.swift in Sources */,
+				73B10F9E2013AE2000C7ABA3 /* FBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SideTwoGame/SideTwoGame.entitlements;
 				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = SideTwoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -406,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = SideTwoGame/SideTwoGame.entitlements;
 				DEVELOPMENT_TEAM = 7EH4Z4842M;
 				INFOPLIST_FILE = SideTwoGame/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
