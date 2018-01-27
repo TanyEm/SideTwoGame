@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Start View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="SideTwoGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="SideTwoGame" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -42,11 +42,27 @@
                                     <constraint firstAttribute="height" constant="50" id="DBT-wp-V0n"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Login in application">
+                                <state key="normal" title="Login via Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0wz-vP-QJp" kind="showDetail" id="h6C-MK-yCL"/>
+                                    <action selector="FBLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kuu-Kg-Vrm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dch-XI-KCj">
+                                <rect key="frame" x="102.5" y="607" width="170" height="50"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="8Lm-2N-YZd"/>
+                                    <constraint firstAttribute="height" constant="50" id="SJo-B6-jaq"/>
+                                    <constraint firstAttribute="width" constant="170" id="xmX-T6-cyE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Login via other account">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="FBLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viP-kC-lPZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -55,13 +71,20 @@
                             <constraint firstAttribute="trailing" secondItem="ZyZ-4L-4md" secondAttribute="trailing" constant="20" id="0Zw-EP-WEj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="tSg-nr-E12" secondAttribute="bottom" constant="68" id="C4M-wx-ykr"/>
                             <constraint firstItem="ZyZ-4L-4md" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Dkw-AV-fba"/>
+                            <constraint firstItem="dch-XI-KCj" firstAttribute="top" secondItem="tSg-nr-E12" secondAttribute="bottom" constant="8" id="QRE-jx-doA"/>
                             <constraint firstItem="ZyZ-4L-4md" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="TFW-zi-2D8"/>
+                            <constraint firstItem="dch-XI-KCj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jTj-lq-zC4"/>
                             <constraint firstItem="tSg-nr-E12" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="nSX-RV-TeZ"/>
                             <constraint firstItem="FLe-EO-vea" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nVi-1k-t3D"/>
                             <constraint firstAttribute="trailing" secondItem="tSg-nr-E12" secondAttribute="trailing" constant="20" id="sdJ-zg-cq0"/>
                             <constraint firstItem="FLe-EO-vea" firstAttribute="top" secondItem="ZyZ-4L-4md" secondAttribute="bottom" constant="18" id="t0f-4a-3Zg"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginFB" destination="tSg-nr-E12" id="eZi-8q-nph"/>
+                        <outlet property="logoutFB" destination="dch-XI-KCj" id="p02-eK-uMe"/>
+                        <segue destination="0wz-vP-QJp" kind="showDetail" identifier="ClientView" id="CgZ-uG-67R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -155,7 +178,7 @@
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="IIb-bC-0t0">
-                                <rect key="frame" x="169" y="315.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -230,14 +253,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home" translatesAutoresizingMaskIntoConstraints="NO" id="piU-me-INb">
-                                                    <rect key="frame" x="28" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="36" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="6E3-S1-3u2"/>
                                                         <constraint firstAttribute="height" constant="40" id="hCl-3C-3CV"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIC-BT-PU5">
-                                                    <rect key="frame" x="88" y="19" width="259" height="21"/>
+                                                    <rect key="frame" x="96" y="19" width="243" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -264,14 +287,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game1" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-lb-niV">
-                                                    <rect key="frame" x="28" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="36" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="sM4-Kr-KOj"/>
                                                         <constraint firstAttribute="height" constant="40" id="vub-YW-FNs"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game One" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKc-UV-vZ5">
-                                                    <rect key="frame" x="88" y="19" width="259" height="21"/>
+                                                    <rect key="frame" x="96" y="19" width="243" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -298,14 +321,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="game2" translatesAutoresizingMaskIntoConstraints="NO" id="bpb-cl-JOU">
-                                                    <rect key="frame" x="28" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="36" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="40" id="cLc-Fp-4Oe"/>
                                                         <constraint firstAttribute="height" constant="40" id="huG-RU-SqS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Game Two" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DrP-B5-8r0">
-                                                    <rect key="frame" x="88" y="19" width="259" height="21"/>
+                                                    <rect key="frame" x="96" y="19" width="243" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -332,14 +355,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logout" translatesAutoresizingMaskIntoConstraints="NO" id="YX1-YM-sHx">
-                                                    <rect key="frame" x="28" y="10" width="40" height="40"/>
+                                                    <rect key="frame" x="36" y="10" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="6Ik-dV-STL"/>
                                                         <constraint firstAttribute="width" constant="40" id="fR8-hX-1qL"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMr-ZE-PQt">
-                                                    <rect key="frame" x="88" y="19" width="259" height="21"/>
+                                                    <rect key="frame" x="96" y="19" width="243" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -355,7 +378,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.76862745099999996" green="0.48627450979999998" blue="0.45098039220000002" alpha="0.3541756466" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="VTk-ia-JyW"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ClientLogout" id="VTk-ia-JyW"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -377,7 +400,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Qt-9N-f9P" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="gjt-SY-Gsn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -395,7 +418,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="49v-1t-xdy" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="bee-nX-5S4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -427,7 +450,7 @@
                                 </connections>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="DBH-EG-VdK">
-                                <rect key="frame" x="169" y="315.5" width="37" height="37"/>
+                                <rect key="frame" x="169" y="315" width="37" height="37"/>
                                 <color key="color" red="0.015686274510000001" green="0.66274509800000003" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -460,7 +483,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xK5-sy-FtA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="MpK-z5-fUd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -480,7 +503,7 @@
         <image name="home" width="100" height="100"/>
         <image name="icon_menu" width="24" height="24"/>
         <image name="logout" width="100" height="100"/>
-        <image name="user" width="100" height="100"/>
+        <image name="user" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="jyY-Fp-Tvc"/>
