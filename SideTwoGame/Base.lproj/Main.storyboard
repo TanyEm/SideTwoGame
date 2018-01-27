@@ -62,7 +62,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="FBLoginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MrP-Vu-hVS"/>
+                                    <action selector="FBLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="viP-kC-lPZ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -378,7 +378,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.76862745099999996" green="0.48627450979999998" blue="0.45098039220000002" alpha="0.3541756466" colorSpace="calibratedRGB"/>
                                         <connections>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="VTk-ia-JyW"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="ClientLogout" id="VTk-ia-JyW"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -506,6 +506,6 @@
         <image name="user" width="500" height="500"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5cd-v3-jyH"/>
+        <segue reference="jyY-Fp-Tvc"/>
     </inferredMetricsTieBreakers>
 </document>

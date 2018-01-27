@@ -20,6 +20,7 @@ class FBManager {
                 if error == nil {
                     let json = JSON(result!)
                     print(json)
+                    UserData.currentUser.setUser(json)
                     competion()
                 }
             })
